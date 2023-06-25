@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap'"> -->
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+    button {
+        cursor: pointer;
+    }
+    
+    body {
+        font-family: 'Kalam', cursive;
+    }
+    
+    * {
+        padding: 0px;
+        margin: 0px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    #mike div:nth-child(1) {
+        left: 0;
+        font-family: 'Dancing Script', cursive;
+        background: rgb(103, 0, 238);
+        text-align: right;
+        color: white;
+    }
+    
+    #mike div:nth-child(2) {
+        right: 0;
+        font-family: 'Dancing Script', cursive;
+        background: rgb(103, 0, 238);
+        color: white;
+    }
+    
+    #mike div {
+        position: fixed;
+        padding-top: 23%;
+        top: 0;
+        font-size: 50px;
+        width: 50%;
+        height: 100%;
+    }
+    
+    logo {
+        font-family: 'Tilt Prism', sans-serif;
+    }
+    
+    #header {
+        background: rgb(103, 0, 238);
+        height: 653px;
+        overflow: hidden;
+    }
+    
+    #header-content {
+        background-color: white;
+        height: 50px;
+        padding-left: 20px;
+    }
+    
+    #header #left {
+        float: right;
+    }
+    
+    #header #right {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #header-content button {
+        border: 0px;
+        color: rgb(103, 0, 238);
+        background-color: transparent;
+        font-size: 20px;
+        padding: 10px;
+        font-weight: bold;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+    #description {
+        padding-top: 200px;
+        padding-left: 30px;
+    }
+    
+    #description div {
+        height: 30px;
+        color: white;
+        font-size: 35px;
+        font-family: 'Kalam', cursive;
+    }
+    
+    #join {
+        height: 40px;
+        font-weight: 700;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 500px;
+        background-color: transparent;
+        border: 2px solid white;
+    }
+    
+    img {
+        width: 200px;
+        max-width: 200px;
+        max-height: 300px;
+        height: fit-content;
+    }
+    
+    div[option="0"] {
+        background-color: blue;
+    }
+    
+    div[option="1"] {
+        background-color: rgb(0, 0, 0);
+    }
+    
+    #division {
+        width: 500px;
+    }
+    
+    #name {
+        font-size: 30px;
+        padding: 1px;
+        letter-spacing: 2px;
+        font-weight: 500px;
+        color: rgb(103, 0, 238);
+    }
+    
+    #description {
+        color: dimgray;
+    }
+    
+    #people {
+        margin-left: 200px;
+    }
+    
+    #add-your-self button {
+        margin-top: 60px;
+        width: 180px;
+        border: 3px solid rgb(103, 0, 238);
+        background-color: white;
+        height: 40px;
+        font-size: 20px;
+        font-weight: 500;
+        color: rgb(103, 0, 238);
+        font-style: italic;
+        border-radius: 3px;
+    }
+    
+    #info input,
+    #info textarea,
+    #info button {
+        margin-top: 3px;
+        margin-bottom: 20px;
+        border: 3px solid rgb(103, 0, 238);
+        background-color: white;
+        color: dimgray;
+        border-radius: 3px;
+    }
+    
+    #info input {
+        width: 362px;
+    }
+    
+    #info textarea {
+        max-width: 1000px;
+        min-width: 362px;
+        padding: 10px;
+        margin-bottom: 14px;
+    }
+    
+    #behind-info {
+        position: fixed;
+        top: 0;
+        display: none;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.453);
+        height: 100%;
+        width: 100%;
+    }
+    
+    #info {
+        width: fit-content;
+        background-color: gray;
+        height: 420px;
+        margin-left: 30%;
+        margin-top: 8%;
+        padding: 30px;
+    }
+    
+    label[for="imageadd"] {
+        border: 3px solid rgb(103, 0, 238);
+        background-color: white;
+        border-radius: 3px;
+        padding-right: 250px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        cursor: pointer;
+        padding-left: 20px;
+        font-size: 20px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        color: dimgray;
+        text-align: center;
+    }
+    
+    .buttom {
+        height: 40px;
+        width: 180px;
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    input[type="file"] {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="mike">
+        <div>Sugar Mummy</div>
+        <div>Hunting</div>
+    </div>
+    <div id="body-content">
+        <div id="header">
+            <div id="header-content">
+                <div id="right">
+                    <logo> SM-hunting</logo>
+                </div>
+                <div id="left">
+                    <button>home</button>
+                    <button>about us</button>
+                    <button>message</button>
+                    <button>account</button>
+                    <button>settings</button>
+                </div>
+            </div>
+            <div id="description">
+                <div id="description1"></div>
+                <div id="description2"></div>
+                <div id="description3"></div>
+                <button id="join">Join Now !</button>
+            </div>
+        </div>
+    </div>
+    <div id="people">
+
+    </div>
+    <div id="add-your-self">
+        <center>
+            <button id="click-add">add your self</button>
+        </center>
+    </div>
+    <div id="behind-info">
+        <div id="info">
+            <label for="name">Name</label><br>
+            <input type="text" id="name"><br>
+            <label for="desc">description</label><br>
+            <textarea name="" id="desc" cols="30" rows="10"></textarea><br>
+            <label for="imageadd">add Image</label>
+            <center>
+                <input type="file" id="imageadd"><br>
+                <button class="buttom">add your info</button></center>
+        </div>
+    </div>
+    <script>
+        const people = [{
+            "name": "Mahoro Divin",
+            "descriptions": "This is a boy who lives in Kigali city he has been waiting for a sugar mummy since 14 years.From when he was born untill now stiil searching",
+            "src": "./1.jpg"
+        }, {
+            "name": "Rutarindwa Angelus",
+            "descriptions": "This is a boy who lives in Nyagatare District him he has a special case that he also sells him self for 200$ and he also seeks for a sugar mummy",
+            "src": "./2.jpg"
+        }, {
+            name: "Izabayo Manzi Pacifique",
+            "descriptions": "also known as BabyShark,this is a boy who lives in Kigali city,he mostly like to sleep and eat as a passion.He seeks for a sugar mummy and he claims him self to be cheap even though you can bring cheap things he can like it.",
+            "src": "./baby.jpg"
+        }]
+
+        function writeWords() {
+            const description = "Welcome to SM-hunting"
+            const description2 = "this is a website which makes people who are in lack of sugar mumy to meet them"
+            const description3 = "wanna join";
+            let i = 0;
+            let e = 0;
+            let o = 0;
+
+            function writeWord1() {
+                if (i <= description.length) {
+                    document.getElementById("description1").textContent += description.charAt(i)
+                    i += 1
+                }
+            }
+
+            function writeWord2() {
+                if (e <= description2.length) {
+                    document.getElementById("description2").textContent += description2.charAt(e)
+                    e += 1
+                }
+            }
+
+            function writeWord3() {
+                if (o <= description3.length) {
+                    document.getElementById("description3").textContent += description3.charAt(o)
+                    o += 1
+                }
+            }
+            setTimeout(() => {
+                setInterval(writeWord1, 80)
+                setTimeout(() => {
+                    setInterval(writeWord2, 80)
+                }, 1800)
+                setTimeout(() => {
+                    setInterval(writeWord3, 80)
+                }, 9000)
+            }, 4400)
+
+        }
+        writeWords()
+        setTimeout(() => {
+            var btn = document.querySelector("#join")
+            btn.style.marginTop = "40px"
+            btn.style.transition = "0.4s"
+
+        }, 15000)
+
+        function mahoro() {
+            var one = document.querySelector("#mike").firstElementChild
+            var rwi = document.querySelector("#mike").lastElementChild
+            one.style.marginLeft = "-50%"
+            one.style.transition = "3s"
+            rwi.style.marginRight = "-50%"
+            rwi.style.transition = "3s"
+
+        }
+        setTimeout(mahoro, 1000)
+
+        function writePeople() {
+            var divivs = document.getElementById("people")
+            for (let i = 0; i <= 3; i++) {
+                var element = document.createElement("div")
+                var div = document.createElement("img");
+                div.id = "image"
+                var div2 = document.createElement("div");
+                div2.id = "division"
+                div2.innerHTML += `<span id="name">${people[i].name}</span><br>`;
+                div2.innerHTML += (`<span id="description">${people[i].descriptions}</span>`)
+                div.src = `${people[i].src}`
+                element.style.display = "flex"
+                element.style.marginTop = "30px"
+                element.append(div2)
+                element.append(div)
+                divivs.append(element)
+            }
+        }
+
+        function addYou() {
+            var name = document.querySelector("input[type='text']").value;
+            var desc = document.querySelector("#desc").value;
+            var src = document.querySelector("input[type='file']").value;
+            console.log(src)
+            people.push({
+                "name": name,
+                "src": src,
+                "descriptions": desc,
+            })
+            writePerson(name, desc, src)
+            document.getElementById("behind-info").style.display = "none"
+        };
+
+        function writePerson(name, desc, src) {
+            var divivs = document.getElementById("people")
+            var element = document.createElement("div")
+            var div2 = document.createElement("div");
+            var div = document.createElement("img");
+            div2.innerHTML += `<span id="name">${name}</span><br>`;
+            div2.innerHTML += (`<span id="description">${desc}</span>`)
+            div.src = `${src}`
+            element.append(div2)
+            element.style.display = "flex"
+            element.style.marginTop = "30px"
+            element.append(div)
+            divivs.append(element)
+            div2.style.width = "500px"
+            div2.id = "division";
+            div.id = "image";
+            div.style.maxHeight = "200px"
+            div.style.width = "200px"
+            div.style.height = "200px"
+        }
+        document.querySelector(".buttom").onclick = () => {
+            addYou()
+        }
+
+        document.querySelector("#click-add").onclick = () => {
+            document.getElementById("behind-info").style.display = "block"
+        }
+        writePeople()
+    </script>
+</body>
+
+</html>
